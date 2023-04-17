@@ -1,0 +1,62 @@
+body, html{
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.calc-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calc{
+    width: 420px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 8px solid grey;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(83, 80, 80);
+}
+.screen{
+    background-color: rgb(68, 161, 92);
+    width: 90%;
+    padding: 0px 10px 0px 10px;
+    
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    height: 80px;
+
+    font-size: 64px;
+    text-align: right;
+}
+.button-location{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.calc-button{
+    padding: 25px;
+    font-weight: 900;
+    border-radius: 8px;
+    margin: 2px;
+    height: 40px;
+    width: 50px;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+
+.blue{
+    background-color: rgb(58, 122, 178);
+}
+.orange{
+    background-color: rgb(166, 110, 41);
+}
+.green{
+    background-color: rgb(53, 116, 88);
+}
