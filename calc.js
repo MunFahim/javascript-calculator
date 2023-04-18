@@ -191,8 +191,11 @@ document.addEventListener("keydown", (e)=>{
 
 let setTime = ()=>{
     let t = new Date();
-    let hour = t.getHours();
+    let hour = t.getHours() % 12;
     let min = t.getMinutes();
+    if (min.toString().length < 2){
+        min = "0"+min;
+    }
     time.textContent = `${hour}:${min}`;
 }
 
