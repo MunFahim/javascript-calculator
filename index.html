@@ -12,14 +12,19 @@
     <main>
         <div class="calc-body">
             <div>
-                <img src="./appleLogo.png" width="60px"
+                <img src="./images/appleLogo.png" width="60px"
                 />
             </div>
             <div class="calc">
                 <header class="header">
-                    <div>12:45</div>
-                    <div>\__________/</div>
-                    <div>45%</div>
+                    <div id="time">00:00</div>
+                    <div style="width: 90px; border-radius: 16px; border: 1px solid rgb(94, 94, 94);;">
+                        <div style="text-align: right; padding-right: 8px; line-height: 10px;">.</div>
+                    </div>
+                    <div id="battery" style="display: flex; gap: 4px; align-items: center;">
+                        <img src="./images/wifi.png" width="20px" height="15px"/>
+                        <img src="./images/batteryLogo.png" width="20px"/>
+                    </div>
                 </header>
                 <div class="screen" id="screen-64">0</div>
                 <div class="button-location">
@@ -30,7 +35,7 @@
                     <div class="calc-button green" id="calcBtn" value="n7">7</div>
                     <div class="calc-button green" id="calcBtn" value="n8">8</div>
                     <div class="calc-button green" id="calcBtn" value="n9">9</div>
-                    <div class="calc-button orange" id="calcBtn" value="m">*</div>
+                    <div class="calc-button orange" id="calcBtn" value="m">X</div>
                     <div class="calc-button green" id="calcBtn" value="n4">4</div>
                     <div class="calc-button green" id="calcBtn" value="n5">5</div>
                     <div class="calc-button green" id="calcBtn" value="n6">6</div>
@@ -39,7 +44,9 @@
                     <div class="calc-button green" id="calcBtn" value="n2">2</div>
                     <div class="calc-button green" id="calcBtn" value="n3">3</div>
                     <div class="calc-button orange" id="calcBtn" value="a">+</div>
-                    <div class="calc-button green" id="calcBtn" value="n0">0</div>
+                    <div class="calc-button green zero" id="calcBtn" value="n0">
+                        <div class="move-zero">0</div>
+                    </div>
                     <div class="calc-button green" id="calcBtn" value="d">.</div>
                     <div class="calc-button orange" id="calcBtn" value="e">=</div>
                 </div>
