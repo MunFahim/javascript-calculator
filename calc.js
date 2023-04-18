@@ -70,16 +70,21 @@ const operator = (op)=>{
         calculate(opInUse, firstNum, secondNum);
         calcSecond = false;
     }
+    if (op == "p" && numShown!= ""){
+        console.log("test");
+        let percent = parseFloat(numShown)/100;
+        numShown = percent;
+        screen.textContent = numShown;
+    }
+    if (op == "o" && numShown != ""){
+        let neg = parseFloat(numShown) * -1;
+        numShown = neg;
+        screen.textContent = numShown;
+    }
+    
+
     if (!calcSecond){
         switch (op){
-            case "o":
-                let neg = parseFloat(numShown) * -1;
-                numShown = ""+neg;
-                screen.textContent = numShown;
-                calcSecond = true;
-                break;
-            case "p":
-                break;
             case "f":
                 opInUse = "/";
                 firstNum = parseFloat(numShown);
