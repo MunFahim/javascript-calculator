@@ -2,7 +2,7 @@
 
 let calcBtn = document.querySelectorAll("#calcBtn");
 let screen = document.querySelector(".screen");
-
+let time = document.querySelector("#time");
 
 let calcSecond = false;
 let opInUse = "";
@@ -185,3 +185,20 @@ document.addEventListener("keydown", (e)=>{
    }
 })
 
+
+
+
+
+let setTime = ()=>{
+    let t = new Date();
+    let hour = t.getHours();
+    let min = t.getMinutes();
+    time.textContent = `${hour}:${min}`;
+}
+
+setInterval(() => {
+    setTime();
+    
+},10000);
+
+setTime();
