@@ -1,3 +1,5 @@
+
+
 let calcBtn = document.querySelectorAll("#calcBtn");
 let screen = document.querySelector(".screen");
 
@@ -36,16 +38,25 @@ const calculate = (op, firstNum, secondNum)=>{
     secondNum = 0;
     opInUse = "";
     numShown = "";
+    checkLen();
 }
 
-
-const showValue = ()=>{
-
+const checkLen = ()=>{
+    if (numShown.length > 11){
+        screen.setAttribute("id", "screen-28");
+    }else if (numShown.length > 8){
+        screen.setAttribute("id", "screen-40");
+    }else if (numShown.length > 5){
+        screen.setAttribute("id", "screen-52");
+    }else {
+        screen.setAttribute("id", "screen-64");
+    }
 }
 
 
 const setValue = (number)=>{
     numShown = numShown+number;
+    checkLen();
     screen.textContent = numShown;
 }
 
@@ -58,6 +69,7 @@ const operator = (op)=>{
         secondNum = 0;
         screen.textContent = numShown;
         calcSecond = false;
+        checkLen();
     }
 
     if (op == "d" && numShown != "" && !numShown.includes(".")){
@@ -69,6 +81,7 @@ const operator = (op)=>{
         secondNum = parseFloat(numShown);
         calculate(opInUse, firstNum, secondNum);
         calcSecond = false;
+        checkLen();
     }
     if (op == "p" && numShown!= ""){
         console.log("test");
@@ -125,11 +138,50 @@ calcBtn.forEach(element => {
     element.addEventListener("click", ()=>{
         let value = element.getAttribute("value");
         if (value[0] == "n"){
-            setValue(value[1]);
+            if (numShown.length < 14){
+                setValue(value[1]);
+            }
+            console.log(numShown);
         }else {
             operator(value[0]);
         }
         
     })
 });
+
+document.addEventListener("keydown", (e)=>{
+    console.log(e);
+   if (parseInt(e.key) > -1 && parseInt(e.key) < 10){
+        if (numShown.length < 14){
+            setValue(e.key);
+        }
+   }
+   switch (e.key){
+    case "*":
+        operator("m");
+        break;
+    case "/":
+        operator("f");
+        break;
+    case "-":
+        operator("s");
+        break;
+    case "+":
+        operator("a");
+        break;
+    case "%":
+        operator("p");
+        break;
+    case "Backspace":
+        operator("c")
+        break;
+    case "Enter":
+        operator("e")
+        break;
+    case ".":
+        operator("d");
+        break;
+
+   }
+})
 

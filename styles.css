@@ -1,36 +1,52 @@
 body, html{
     margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(245, 210, 164);
+    background-color: rgb(0, 0, 0);
 }
 .calc-body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
 }
+
 .calc{
-    width: 420px;
+    width: 320px;
+    max-width: 320px;
     padding: 8px;
     border-radius: 8px;
-    border: 8px solid grey;
+    border: 6px solid rgb(221, 221, 221);
+    border-radius: 44px;
     margin: 16px;
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(83, 80, 80);
+    /*background-color: rgb(83, 80, 80);*/
+    background-color: black;
+
+}
+
+.header{
+    color: white;
+    display: flex;
+    margin-top: 6px;
+    justify-content: space-between;
+    width: 90%;
 }
 .screen{
-    background-color: rgb(68, 161, 92);
+    background-color: rgb(0, 0, 0);
+    color: white;
     width: 90%;
-    padding: 0px 10px 0px 10px;
+    padding: 48px 10px 0px 10px;
 
     overflow-x: scroll;
     overflow-y: hidden;
 
     margin: auto;
-    margin-top: 12px;
+    margin-top: 32px;
     margin-bottom: 8px;
     height: 80px;
 
@@ -57,12 +73,12 @@ body, html{
     flex-wrap: wrap;
 }
 .calc-button{
-    padding: 25px;
+    padding: 15px;
     font-weight: 900;
-    border-radius: 8px;
-    margin: 2px;
+    border-radius: 32px;
+    margin: 4px;
     height: 40px;
-    width: 50px;
+    width: 40px;
     font-size: 25px;
     line-height: 40px;
     text-align: center;
@@ -71,13 +87,15 @@ body, html{
 
 
 .blue{
-    background-color: rgb(58, 122, 178);
+    background-color: rgb(167, 166, 166);
+    color: black;
 }
 .orange{
-    background-color: rgb(166, 110, 41);
+    background-color: rgb(207, 131, 39);
 }
 .green{
-    background-color: rgb(53, 116, 88);
+    background-color: rgb(49, 49, 49);
+    color: white;
 }
 
 
@@ -92,4 +110,25 @@ body, html{
 .green:hover{
     background-color: rgba(53, 116, 88, 0.671);
     cursor:pointer;
+}
+
+.bar{
+    color: white;
+    margin-top: 20px;
+}
+
+#screen-52{
+    font-size: 52px;
+    line-height: 70px;
+}
+#screen-40{
+    font-size: 40px;
+    line-height: 76px;
+}
+#screen-28{
+    font-size: 28px;
+    line-height: 82px;
+}   
+#screen-64{
+    font-size: 64px;
 }
