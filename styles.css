@@ -1,6 +1,7 @@
 body, html{
     margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(245, 210, 164);
 }
 .calc-body{
     display: flex;
@@ -13,6 +14,7 @@ body, html{
     border-radius: 8px;
     border: 8px solid grey;
     margin: 16px;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,7 +25,10 @@ body, html{
     background-color: rgb(68, 161, 92);
     width: 90%;
     padding: 0px 10px 0px 10px;
-    
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
     margin: auto;
     margin-top: 12px;
     margin-bottom: 8px;
@@ -32,6 +37,20 @@ body, html{
     font-size: 64px;
     text-align: right;
 }
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(47, 78, 55, 0.425);
+    border-radius: 8px;
+}
+
+
+
+
+
 .button-location{
     display: flex;
     justify-content: center;
@@ -59,4 +78,18 @@ body, html{
 }
 .green{
     background-color: rgb(53, 116, 88);
+}
+
+
+.blue:hover{
+    background-color: rgba(58, 122, 178, 0.671);
+    cursor:pointer;
+}
+.orange:hover{
+    background-color: rgb(166, 110, 41, 0.671);
+    cursor:pointer;
+}
+.green:hover{
+    background-color: rgba(53, 116, 88, 0.671);
+    cursor:pointer;
 }
